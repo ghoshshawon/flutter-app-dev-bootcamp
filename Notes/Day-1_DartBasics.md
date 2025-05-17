@@ -46,7 +46,7 @@ pubspec.yaml is where you declare your dependencies.
 
 pubspec.lock locks the specific versions used to ensure consistency across teams.
 
-## Can you modify the Android or iOS code directly in a Flutter app? Why would you do that?
+## Can you modify the Android or iOS code directly in a Flutter app? How would you do that?
 Trick: Yes, under /android and /ios. You may do it to add native functionality or plugins that aren't available in Dart.
 
 
