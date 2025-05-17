@@ -1,0 +1,123 @@
+✅ What is a StatelessWidget?
+A widget that does not hold any state.
+
+Its UI does not change dynamically once built.
+
+Used when you want to display static content or UI that doesn’t need to be updated.
+
+🔸 Example:
+
+dart
+Copy
+Edit
+class MyApp extends StatelessWidget {
+  @override
+  Widget build(BuildContext context) {
+    return MaterialApp(
+      home: Scaffold(
+        appBar: AppBar(title: Text('Stateless Widget')),
+        body: Center(child: Text('Hello, Flutter!')),
+      ),
+    );
+  }
+}
+✅ How to create a StatelessWidget in Android Studio?
+Type stless and press Tab – this auto-generates the boilerplate.
+
+Replace ClassName with your widget name.
+
+Fill the build() method with your UI.
+
+🧠 Real-life Analogy:
+A StatelessWidget is like a printed book page – it doesn't change once printed.
+
+✅ What is a Container in Flutter?
+A box-like widget used to style, position, and size its child.
+
+Can have:
+
+height, width
+
+color
+
+padding, margin (via EdgeInsets)
+
+alignment, decoration
+
+🔸 Example:
+
+dart
+Copy
+Edit
+Container(
+  height: 100,
+  width: 100,
+  color: Colors.blue,
+  padding: EdgeInsets.all(10),
+  margin: EdgeInsets.symmetric(horizontal: 20),
+  child: Text("Box"),
+)
+✅ EdgeInsets Types
+EdgeInsets.all(value) → All sides
+
+EdgeInsets.only(left: 10, top: 5) → Specific sides
+
+EdgeInsets.symmetric(horizontal: 10, vertical: 5) → Pairs of sides
+
+✅ What is mainAxisAlignment?
+Used in Row and Column to align children horizontally or vertically.
+
+Options:
+
+dart
+Copy
+Edit
+MainAxisAlignment.start
+MainAxisAlignment.center
+MainAxisAlignment.end
+MainAxisAlignment.spaceBetween
+MainAxisAlignment.spaceAround
+MainAxisAlignment.spaceEvenly
+✅ What is crossAxisAlignment?
+Aligns children across the main axis, i.e., vertical in Row, horizontal in Column.
+
+✅ What is SizedBox?
+A widget that creates fixed space between elements or gives a widget fixed size.
+
+🔸 Example:
+
+dart
+Copy
+Edit
+SizedBox(height: 20)
+SizedBox(width: 50)
+✅ What is CircleAvatar?
+Used to create circular profile images or initials.
+
+🔸 Example:
+
+dart
+Copy
+Edit
+CircleAvatar(
+  radius: 30,
+  backgroundImage: NetworkImage("https://example.com/avatar.jpg"),
+)
+✅ What is Card?
+A material design card with elevation, rounded corners, etc.
+
+🔸 Example:
+
+dart
+Copy
+Edit
+Card(
+  elevation: 4,
+  margin: EdgeInsets.all(10),
+  child: Padding(
+    padding: EdgeInsets.all(16),
+    child: Text("This is a card"),
+  ),
+)
+🟦 Day 2 Summary:
+You learned about the static building blocks of Flutter: StatelessWidget, Container, layouts (Row, Column), spacing, and UI widgets like SizedBox, CircleAvatar, and Card.
