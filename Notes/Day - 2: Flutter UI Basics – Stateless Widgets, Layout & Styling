@@ -1,54 +1,52 @@
-✅ What is a StatelessWidget?
-A widget that does not hold any state.
+# 📘 Day 2 – Flutter UI: Stateless Widgets, Layout, Containers, Styling
 
-Its UI does not change dynamically once built.
+---
 
-Used when you want to display static content or UI that doesn’t need to be updated.
+## ✅ What is a StatelessWidget?
 
-🔸 Example:
+- It’s a widget that **does not change** its state during its lifetime.
+- Used when the UI stays the same.
+- Ideal for static screens or non-interactive elements.
 
-dart
-Copy
-Edit
+### 🔸 Example:
+```dart
 class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
       home: Scaffold(
-        appBar: AppBar(title: Text('Stateless Widget')),
+        appBar: AppBar(title: Text('Stateless')),
         body: Center(child: Text('Hello, Flutter!')),
       ),
     );
   }
 }
-✅ How to create a StatelessWidget in Android Studio?
-Type stless and press Tab – this auto-generates the boilerplate.
+```
 
-Replace ClassName with your widget name.
+## 🧠 Real-life example:
+Think of a printed **poster**. Once created, it doesn’t change. That’s like a StatelessWidget.
 
-Fill the build() method with your UI.
+---
 
-🧠 Real-life Analogy:
-A StatelessWidget is like a printed book page – it doesn't change once printed.
+## ✅ How to create a StatelessWidget in Android Studio?
 
-✅ What is a Container in Flutter?
-A box-like widget used to style, position, and size its child.
+- Type `stless` and press Enter.
+- It will auto-generate the class.
+- Customize the widget name and inside `build()`.
 
-Can have:
+---
 
-height, width
+## ✅ What is a Container in Flutter?
 
-color
+- A **box model** widget used to design and position UI.
+- Can have:
+  - `height`, `width`
+  - `color`
+  - `margin`, `padding` (via `EdgeInsets`)
+  - `alignment`, `decoration`
 
-padding, margin (via EdgeInsets)
-
-alignment, decoration
-
-🔸 Example:
-
-dart
-Copy
-Edit
+### 🔸 Example:
+```dart
 Container(
   height: 100,
   width: 100,
@@ -57,67 +55,107 @@ Container(
   margin: EdgeInsets.symmetric(horizontal: 20),
   child: Text("Box"),
 )
-✅ EdgeInsets Types
-EdgeInsets.all(value) → All sides
+```
 
-EdgeInsets.only(left: 10, top: 5) → Specific sides
+---
 
-EdgeInsets.symmetric(horizontal: 10, vertical: 5) → Pairs of sides
+## ✅ What is EdgeInsets in Flutter?
 
-✅ What is mainAxisAlignment?
-Used in Row and Column to align children horizontally or vertically.
+Used to give **padding** or **margin** around widgets.
 
-Options:
+### 🔹 Types:
+- `EdgeInsets.all(10)` → all sides
+- `EdgeInsets.only(left: 10, top: 5)` → specific sides
+- `EdgeInsets.symmetric(horizontal: 10, vertical: 5)` → pairs
 
-dart
-Copy
-Edit
-MainAxisAlignment.start
-MainAxisAlignment.center
-MainAxisAlignment.end
-MainAxisAlignment.spaceBetween
-MainAxisAlignment.spaceAround
-MainAxisAlignment.spaceEvenly
-✅ What is crossAxisAlignment?
-Aligns children across the main axis, i.e., vertical in Row, horizontal in Column.
+---
 
-✅ What is SizedBox?
-A widget that creates fixed space between elements or gives a widget fixed size.
+## ✅ What is mainAxisAlignment?
 
-🔸 Example:
+Used to align widgets **along the main axis** (horizontal in Row, vertical in Column).
 
-dart
-Copy
-Edit
+### 🔹 Options:
+- `start`
+- `center`
+- `end`
+- `spaceBetween`
+- `spaceAround`
+- `spaceEvenly`
+
+### 🔸 Example:
+```dart
+Column(
+  mainAxisAlignment: MainAxisAlignment.center,
+  children: [Text("1"), Text("2")],
+)
+```
+
+---
+
+## ✅ What is crossAxisAlignment?
+
+Used to align widgets **across the main axis**.
+
+Example in Column (horizontal alignment):
+```dart
+Column(
+  crossAxisAlignment: CrossAxisAlignment.start,
+  children: [Text("Hello"), Text("World")],
+)
+```
+
+---
+
+## ✅ What is SizedBox?
+
+- A widget that adds **space** between other widgets.
+- You can also give it fixed size.
+
+### 🔸 Example:
+```dart
 SizedBox(height: 20)
-SizedBox(width: 50)
-✅ What is CircleAvatar?
-Used to create circular profile images or initials.
+```
 
-🔸 Example:
+---
 
-dart
-Copy
-Edit
+## ✅ What is CircleAvatar?
+
+- Widget for showing a **circular image** or initials.
+- Used for profile icons.
+
+### 🔸 Example:
+```dart
 CircleAvatar(
   radius: 30,
-  backgroundImage: NetworkImage("https://example.com/avatar.jpg"),
+  backgroundImage: NetworkImage("https://example.com/image.jpg"),
 )
-✅ What is Card?
-A material design card with elevation, rounded corners, etc.
+```
 
-🔸 Example:
+---
 
-dart
-Copy
-Edit
+## ✅ What is Card widget in Flutter?
+
+- A **Material Design** styled container with:
+  - Elevation (shadow)
+  - Rounded corners
+
+### 🔸 Example:
+```dart
 Card(
   elevation: 4,
-  margin: EdgeInsets.all(10),
   child: Padding(
     padding: EdgeInsets.all(16),
     child: Text("This is a card"),
   ),
 )
-🟦 Day 2 Summary:
-You learned about the static building blocks of Flutter: StatelessWidget, Container, layouts (Row, Column), spacing, and UI widgets like SizedBox, CircleAvatar, and Card.
+```
+
+---
+
+# 📘 Summary
+
+- `StatelessWidget`: Static UI
+- `Container`: Styling box
+- `EdgeInsets`: Padding/margin
+- `mainAxisAlignment` / `crossAxisAlignment`: Layout control
+- `SizedBox`, `Card`, `CircleAvatar`: Useful UI widgets
