@@ -4,7 +4,7 @@ Flutter is an open-source UI toolkit created by Google. It allows developers to 
 
 ---
 
-## 1. Why Flutter?
+## 1. Why Flutter? ✨
 
 - **Hot Reload** – See changes **instantly** after saving your code. No need to restart the app.
 - **Cross-Platform** – Build **Android, iOS, Web, and Desktop** apps from a **single codebase**.
