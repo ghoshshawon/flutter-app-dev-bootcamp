@@ -1,4 +1,4 @@
-### 📘 Day 6 – Flutter Packages, Dependencies, Dart Functions & Arrays
+# 📘 Day 6 – Flutter Packages, Dependencies, Dart Functions & Arrays
 ### ✅ What are Flutter Packages?
 A package is a collection of pre-written code that adds functionality (e.g., animations, icons, audio).
 
@@ -20,7 +20,7 @@ dependencies:
 
   audioplayers: ^3.0.7
 ```
-🔹 What is ^3.0.7?
+### 🔹 What is ^3.0.7?
 The caret (^) means:
 → Use latest compatible version that doesn't break changes.
 
@@ -66,14 +66,14 @@ void sayHello() {
   print("Hello!");
 }
 ```
-🔹 With Return Value:
+#### 🔹 With Return Value:
 dart
 ```
 int add(int a, int b) {
   return a + b;
 }
 ```
-🔸 Arrow Function:
+#### 🔸 Arrow Function:
 dart
 ```
 int square(int x) => x * x;
@@ -87,7 +87,7 @@ void main() {
   print("Sum: $sum");
 }
 ```
-🔸 Anonymous Function (No name):
+ #### 🔸 Anonymous Function (No name):
 dart
 ```
 var greet = () {
@@ -102,13 +102,13 @@ Understand return types.
 Be ready to explain the difference between void, dynamic, and var.
 
 ### ✅ Arrays in Dart (Lists)
-🔸 Syntax:
+#### 🔸 Syntax:
 dart
 ```
 List<String> fruits = ['apple', 'banana', 'mango'];
 print(fruits[0]); // apple
 ```
-🔸 Add item:
+#### 🔸 Add item:
 dart
 ```
 fruits.add('grape');
@@ -134,13 +134,16 @@ void main() {
 ```
 ###  ✅ Used to reduce boilerplate when only one expression is used.
 
-### ✅ Some Useful Flutter Packages for Design:
-Package	Purpose	Link
-google_fonts	Custom fonts	google_fonts
-font_awesome_flutter	Free icons	font_awesome_flutter
-lottie	Animations	lottie
-flutter_spinkit	Loading indicators	flutter_spinkit
-audioplayers	Audio playback	audioplayers
+## ✅ Some Useful Flutter Packages for Design
+
+| Package | Purpose | Link |
+|--------|---------|------|
+| `google_fonts` | Custom fonts | [google_fonts](https://pub.dev/packages/google_fonts) |
+| `font_awesome_flutter` | Free icons | [font_awesome_flutter](https://pub.dev/packages/font_awesome_flutter) |
+| `lottie` | Animations | [lottie](https://pub.dev/packages/lottie) |
+| `flutter_spinkit` | Loading indicators | [flutter_spinkit](https://pub.dev/packages/flutter_spinkit) |
+| `audioplayers` | Audio playback | [audioplayers](https://pub.dev/packages/audioplayers) |
+
 
 
 
